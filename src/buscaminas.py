@@ -235,12 +235,8 @@ if __name__ == "__main__":
                     else:
                         celda = input_posicion_usable(lugar)
                         if decision == "marcar":
-                            if visualizar_tablero[celda[0]][celda[1]] == "[B]":
-                                tablero_visual = marcar_celda(tablero_visual, celda, " ")
-                                minas += 1
-                            else:
-                                tablero_visual = marcar_celda(tablero_visual, celda, "B")
-                                minas -= 1
+                            tablero_visual = marcar_celda(tablero_visual, celda, "B")
+                            minas -= 1
                         elif decision == "descubrir":
                             booleano_mina = comprobar_celda(tablero_real, celda)
                             if booleano_mina is True:  # Pierde
