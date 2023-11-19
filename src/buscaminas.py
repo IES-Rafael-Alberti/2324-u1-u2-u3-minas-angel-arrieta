@@ -8,12 +8,12 @@ Este ejercicio es una excelente manera de evaluar y mejorar las habilidades de p
 """
 
 
-def jugar(opcion: int) -> str:
-    if opcion == 1:
+def jugar(opcion: str) -> str:
+    if opcion == "1":
         actuar = "descubrir"
-    elif opcion == 2:
+    elif opcion == "2":
         actuar = "marcar"
-    elif opcion == 3:
+    elif opcion == "3":
         actuar = "salir"
     else:
         actuar = "error"
@@ -213,7 +213,7 @@ if __name__ == "__main__":
             visualizar_tablero = dibujar_tablero(tablero_visual)
             print(visualizar_tablero)
             # Entrada
-            accion = int(input("Elige una acción:\n"
+            accion = (input("Elige una acción:\n"
                                "1. Descubrir celda\n"
                                "2. Marcar celda\n"
                                "3. Salir\n"
